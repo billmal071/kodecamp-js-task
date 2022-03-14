@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
+.center-elem {
+  @apply flex justify-center items-center w-full h-[90vh];
+}
+
+.bg-style {
+  @apply px-5 md:px-10 py-6 bg-very-dark-blue;
+}
+
+.btn {
+  @apply bg-dark-blue text-white-1 rounded-md;
+}
+
+.btn-dark {
+  @apply px-7 py-1.5;
+}
+
+.btn-dark-sm {
+  @apply px-2 py-1 text-base;
+}
+
+.white-text {
+  @apply text-white-1 font-medium text-base;
+}
+
+.header {
+  @apply py-3 px-5 bg-dark-blue;
+
+  p {
+    @apply capitalize text-white-1 font-semibold text-lg;
+  }
+}
+
+.main {
+  .input-wrapper {
+    @apply flex flex-col md:flex-row justify-between;
+
+    div {
+      @apply relative;
+
+      i {
+        @apply absolute z-20 text-white-1 left-[8%] top-[30%];
+      }
+
+      input {
+        @apply w-full md:w-96 pl-16 py-2 bg-dark-blue text-white-1 rounded-md border-0 outline-none;
+      }
+    }
+
+    select {
+      @apply px-3 py-1 bg-dark-blue text-white-1 mt-5 md:mt-0 w-52;
+    }
+  }
+
+  .country-wrapper {
+    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-8 mt-10;
+
+    .country {
+      @apply shadow-md rounded-sm hover:scale-105;
+
+      .country-flag {
+        img {
+          height: 200px;
+        }
+      }
+
+      .country-info {
+        @apply p-4;
+
+        .country-name {
+          @apply text-white-1 font-semibold text-lg capitalize mb-2;
+        }
+
+        .country-data {
+          @apply text-white-1 font-medium;
+
+          span {
+            @apply text-white-1 font-normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  @apply h-screen;
+  .back {
+    @apply mt-7;
+    button {
+      i {
+        @apply mr-2;
+      }
+    }
+  }
+
+  .wrapper {
+    @apply mt-14 flex flex-col md:flex-row gap-3;
+
+    .wrapper-img {
+      @apply flex-1;
+
+      img {
+        @apply w-full md:w-[70%];
+      }
+    }
+
+    .wrapper-content {
+      @apply flex-1 px-4;
+
+      h3 {
+        @apply text-white-1 font-semibold text-2xl;
+      }
+
+      section {
+        @apply flex md:flex-row flex-col justify-between mt-8;
+
+        div {
+          @apply flex-1;
+        }
+      }
+    }
+
+    .border-wrapper {
+      @apply flex flex-col md:flex-row mt-10;
+
+      .border-countries {
+        @apply md:mt-0 mt-12;
+      }
+    }
+  }
+}
