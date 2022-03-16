@@ -1,6 +1,9 @@
 {
   "name": "countries",
-  "source": "src/",
+  "source": [
+    "src/index.html",
+    "src/country.html"
+  ],
   "scripts": {
     "start": "parcel src/*.html --open",
     "build": "parcel build"
